@@ -83,6 +83,10 @@
       "types": "./HSK2.0_not_chengyu.json.d.ts",
       "default": "./HSK2.0_not_chengyu.json"
     },
+    "./HSK2.0_word_pos.json": {
+      "types": "./HSK2.0_word_pos.json.d.ts",
+      "default": "./HSK2.0_word_pos.json"
+    },
     "./HSK2.0_words.json": {
       "types": "./HSK2.0_words.json.d.ts",
       "default": "./HSK2.0_words.json"

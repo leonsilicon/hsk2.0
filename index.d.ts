@@ -1,5 +1,11 @@
 export type Hsk20List = string[];
 
+/**
+ * Part-of-speech tags the syllabus attaches to a homograph, as word -> its tags. The word lists
+ * carry the bare word; `对（介词）` / `对（形容词）` become `对` here with `["介词", "形容词"]`.
+ */
+export type Hsk20WordPos = Record<string, string[]>;
+
 export interface Hsk20ExportFileSummary {
   name: string;
   size_bytes: number;
@@ -25,6 +31,7 @@ export interface Hsk20Dataset {
   fourCharPhrases: Hsk20List;
   chengyu: Hsk20List;
   notChengyu: Hsk20List;
+  wordPos: Hsk20WordPos;
   words: Hsk20List;
   wordsLevel1: Hsk20List;
   wordsLevel2: Hsk20List;
@@ -45,6 +52,7 @@ export declare const hsk20CharsLevel6: Hsk20List;
 export declare const hsk204CharPhrases: Hsk20List;
 export declare const hsk20Chengyu: Hsk20List;
 export declare const hsk20NotChengyu: Hsk20List;
+export declare const hsk20WordPos: Hsk20WordPos;
 export declare const hsk20Words: Hsk20List;
 export declare const hsk20WordsLevel1: Hsk20List;
 export declare const hsk20WordsLevel2: Hsk20List;

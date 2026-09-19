@@ -9,6 +9,7 @@ import hsk20CharsLevel6 from "./HSK2.0_chars_level6.json" with { type: "json" };
 import hsk204CharPhrases from "./HSK2.0_4char_phrases.json" with { type: "json" };
 import hsk20Chengyu from "./HSK2.0_chengyu.json" with { type: "json" };
 import hsk20NotChengyu from "./HSK2.0_not_chengyu.json" with { type: "json" };
+import hsk20WordPos from "./HSK2.0_word_pos.json" with { type: "json" };
 import hsk20Words from "./HSK2.0_words.json" with { type: "json" };
 import hsk20WordsLevel1 from "./HSK2.0_words_level1.json" with { type: "json" };
 import hsk20WordsLevel2 from "./HSK2.0_words_level2.json" with { type: "json" };
@@ -29,6 +30,7 @@ export {
   hsk204CharPhrases,
   hsk20Chengyu,
   hsk20NotChengyu,
+  hsk20WordPos,
   hsk20Words,
   hsk20WordsLevel1,
   hsk20WordsLevel2,
@@ -50,6 +52,7 @@ const hsk20 = {
   fourCharPhrases: hsk204CharPhrases,
   chengyu: hsk20Chengyu,
   notChengyu: hsk20NotChengyu,
+  wordPos: hsk20WordPos,
   words: hsk20Words,
   wordsLevel1: hsk20WordsLevel1,
   wordsLevel2: hsk20WordsLevel2,

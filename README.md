@@ -17,6 +17,30 @@ The source data follows the official HSK 2.0 standard. See
 - `HSK2.0_not_chengyu.json`: four-character phrases that are not chengyu
 - `HSK2.0_export.json`: manifest with source file metadata and hashes
 
+## Part-Of-Speech Annotations
+
+The syllabus disambiguates a homograph by tagging its part of speech in fullwidth parentheses:
+`对（介词）` and `对（形容词）` are the single word 对, listed twice for its preposition and
+adjective senses. That tag is grammatical metadata, never part of the word.
+
+The published word lists therefore carry the bare word, and the tags are available separately as
+`HSK2.0_word_pos.json` (also exported as `hsk20WordPos`):
+
+```js
+import { hsk20WordPos, hsk20WordsLevel2 } from "@leonsilicon/hsk2.0";
+
+hsk20WordsLevel2.includes("对"); // true — listed once, not twice
+hsk20WordPos["对"];              // ["介词", "形容词"]
+```
+
+Eleven words carry tags: 只、喂、地、对、得、种、等、花、过、还 and 长.
+
+A word is deduplicated only **within** a list. Senses of one word can sit in different levels —
+`过（助词）` is level 2 and `过（动词）` is level 3 — so 过 appears in both, once each.
+
+An annotation that is not a known part-of-speech tag fails the build rather than being silently
+treated as part of a word.
+
 ## Install
 
 ```bash
